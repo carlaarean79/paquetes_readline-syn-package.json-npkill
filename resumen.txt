@@ -21,3 +21,15 @@ npm i -g npkill (instala una nueva libreria) y luego ejecutar npkill (nos va a m
 donde está ubicado el archivo node_modules) con el cursor nos posicionamos sobre el y presionamos 
 el botón derecho del mouse. Automanticamente se elimina el archivo por completo.
 Cuando descarguemos el archivo desde GitHub, debemos volver a instalarlo, de otro va a dar error
+
+*comandos Git
+---repositorio local---
+=> verificar versión instalada de git: git version 
+=> crear repositorio local (crea una carpeta invisible dentro de la carpeta de trabajo): git init
+=> los archivos creados adoptan la U de untracked(aviso de que no se guardado o creado la captura
+del o los archivos)
+=> para verificar cuales archivos no están guardados o cuales sí: git status
+=> para guardar la captura : git add nombredearchivo o git add . para guardar varios archivos juntos
+al guardarse los archivos adoptan la A 
+=> Una vez guardado los archivos desaparacen los tracked y se debe realizar un commit con un mensaje
+que establesca numero de versión de guardado o breve descripción de los cambios realizados
