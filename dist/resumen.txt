@@ -1,0 +1,23 @@
+*antes de crear los archivos ts, crear el package.json con el comando npm init -y
+modificar el script agregando "dev": "tsc -watch", de este modo compilará automanticamente
+cuando por terminal se haga correr el comando npm run dev
+
+*para que mi archivo tenga todas las dependencias que necesita para funcionar hay que instalar
+ tsconfing.json con el comando tsc --init
+en ese archivo están todas las posibles opciones del compilador. Algunas ya vienen activada y/otras hay que activarlas como: "root Dir" linea 26 => se descomenta y se le especifica cual será 
+la carpeta o directorio raíz donde se almacenaran los archivos fuentes (.ts)=>"root Dir": "./src";
+lo que va a realizar esta opción es que cuando se compilen los archivos, los ts van a ser guardados 
+en la carpeta src 
+luego hay descomentar la linea 47 "out Dir" y especificarle la ruta que va a contener a todos
+los archivos js una vez compilados. Para eso se realiza "out Dir": "./dist"
+Ambas carpetas src y dist deben haber sido creadas en nuestro trabajo y por separado
+
+*comando npm i readline-sync: este comando nos permite instalar un paquete/librería donde el usuario
+podrá ingresar datos por teclado (parecido al prompt)
+Cuando se instala, junto a el se crea la carpeta node_modules, necesario para que nuestro archivo
+funcione correctamente con sus librerías. Al ser muy pesado deber omitirse al momento de subir el trabajo a GitHub. 
+Para ello se implenta el comando : 
+npm i -g npkill (instala una nueva libreria) y luego ejecutar npkill (nos va a mostrar el directorio
+donde está ubicado el archivo node_modules) con el cursor nos posicionamos sobre el y presionamos 
+el botón derecho del mouse. Automanticamente se elimina el archivo por completo.
+Cuando descarguemos el archivo desde GitHub, debemos volver a instalarlo, de otro va a dar error
