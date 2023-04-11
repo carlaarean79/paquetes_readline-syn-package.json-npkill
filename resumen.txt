@@ -24,12 +24,41 @@ Cuando descarguemos el archivo desde GitHub, debemos volver a instalarlo, de otr
 
 *comandos Git
 ---repositorio local---
-=> verificar versión instalada de git: git version 
-=> crear repositorio local (crea una carpeta invisible dentro de la carpeta de trabajo): git init
+=> /git version/  => verificar versión instalada de git
+=>  /git init/ => crear repositorio local (crea una carpeta invisible dentro de la carpeta de trabajo)
 => los archivos creados adoptan la U de untracked(aviso de que no se guardado o creado la captura
 del o los archivos)
-=> para verificar cuales archivos no están guardados o cuales sí: git status
-=> para guardar la captura : git add nombredearchivo o git add . para guardar varios archivos juntos
+=> /git status/ =>para verificar cuales archivos no están guardados o cuales sí
+=> para guardar la captura : /git add nombredearchivo/ o /git add ./ para guardar varios archivos juntos
 al guardarse los archivos adoptan la A 
 => Una vez guardado los archivos desaparacen los tracked y se debe realizar un commit con un mensaje
-que establesca numero de versión de guardado o breve descripción de los cambios realizados
+que establezca número de versión de guardado o breve descripción de los cambios realizados => /git commit -m "Esta es la primera
+versión"/ =>ahora sí guarda todos los archivos en la carpeta local y desaparecen los tracked
+=> si modificamos los archivos aparace el tracke M de modificado. Al realizar commit nuevamente desaparece al igual que los descarguemos
+=> cada vez que realice una modificación al archivo, se deben realizar todos los pasos anteriores, desde git status
+hasta git commit y en cada commit agregar el mensaje que corresponda.
+=> /git log oneline/ => nos permite ver cuántas versiones de guardado existen. Esas versiones quedan guardadas por tiempo
+indeterminado por lo cual si queremos borrar alguna versión y volver a trabajar en la versión anterior es posible recuperarla
+con el comando /git reset --hard N°deversión/
+
+*Comandos GitHub
+----repositorio en la nube----
+En nuestra cuenta de GitHub creamos un repositorio
+=> Repositorio => Nuevo =>Crear un nuevo repositorio=>nombre => inserte un repositorio existente desde la línea de comando
+=> copiar y pegar este comando en la terminal de nuestro archivo =>
+/git remote add origin https://github.com/carlaarean79/Resumen-json-readline-sync-git.git/
+=>se linean el repositorio local con el repositorio d ela nube. 
+=> /git push -u origin (main o master)/ Todo mi archivo local se sube a la nube de GitHub dentro de la carpeta de 
+mi repositorio. Main o master es la rama principal que identifica a mi repositorio en el visual.
+=> /git pull origin master / => busca los archivos que están en la nube y los trae al archivo de trabajo
+
+----trabajar en ramas----
+=>/git branch -M (main o master)/ => este comando también se copia desde el repositorio creado en GitHub
+=> /git branch/ => nos indica en qué rama estamos trabajando la identifica con un *
+=> /git branch nombrederamanueva/ => crea una nueva rama.
+=> /git checkout nombrederamanueva/ => me cambia de rama
+=> los cambios realizados se guandan en esa rama nueva, pero no en la original. Para guardar los cambios se deben funcionar
+las ramas nueva y original.
+=> primero se debe volver a la rama original /git checkout ramaoriginal/ y después con /git merge ramanueva/ => se le 
+dice a la rama original que se fucione con la rama nueva.
+
