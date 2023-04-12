@@ -1,3 +1,4 @@
+Hola
 *antes de crear los archivos ts, crear el package.json con el comando npm init -y
 modificar el script agregando "dev": "tsc -watch", de este modo compilará automanticamente
 cuando por terminal se haga correr el comando npm run dev
