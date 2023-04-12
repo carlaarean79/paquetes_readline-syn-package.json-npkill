@@ -1,7 +1,6 @@
 "use strict";
 let saludar = "hola mundo";
-let mensaje = saludar;
-console.log(mensaje);
+console.log(saludar);
 let readlineSync = require('readline-sync'); //npm i --save-dev @types/node//instalar para que require no de error
 let alturaPersona = readlineSync.question("indique la altura de la persona: ");
 console.log(alturaPersona);
